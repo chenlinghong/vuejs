@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+    <!-- 将Vue标签放于head防止抖屏 -->
+    <script src="../vue.js"></script>
+</head>
+<body>
+
+<!--挂载点、模板和实例-->
+<div id="root01"></div>
+<script>
+    new Vue({
+        el: "#root01",
+        template: "<h1>{{msg}}</h1>",
+        data: {
+            msg: "Hello World!"
+        }
+    })
+</script>
+
+
+<!--Vue实例中的数据、事件及方法-->
+<div id="root02">
+    <!--插值表达式-->
+    <h1>Hello {{number}}</h1>
+    <!--Vue指令-->
+    <h1 v-text="number"></h1>
+    <h1 v-html="number"></h1>
+    <div v-text="content"></div>
+    <div v-html="content"></div>
+
+    <div v-on:click="this.handleClick">v-on: {{msg}}</div>
+    <div @click="this.handleClick">@ {{msg}}</div>
+
+</div>
+<script>
+    new Vue({
+        el: "#root02",
+        data: {
+            msg: "Hello World!",
+            number: 123,
+            content: "<h1>Hello World!</h1>",
+            content1: "点击显示文本"
+        },
+        methods: {
+            handleClick: function () {
+                this.msg = "点击事件成功显示文本"
+            }
+        }
+    })
+</script>
+
+
+<!--Vue中的属性绑定和双向数据绑定-->
+<div id="root03">
+    <div v-bind:title="'reminder' + msg">Hello</div>
+    <div :title="'reminder' + msg">Hello</div>
+
+    <!--双向绑定-->
+    <input v-model="content"/>
+    <div>{{content}}</div>
+</div>
+<script>
+    new Vue({
+        el: "#root03",
+        data: {
+            msg: "Hello World!",
+            content: "this is a content."
+        }
+    })
+</script>
+
+
+<!--Vue中的计算属性和侦听器-->
+<div id="root04">
+    姓：<input v-model="firstName"/>
+    名：<input v-model="lastName"/>
+    <div>{{firstName}}{{lastName}}</div>
+
+    姓：<input v-model="firstName"/>
+    名：<input v-model="lastName"/>
+    <div>{{fullName}}</div>
+    <div>{{count}}</div>
+</div>
+<script>
+    new Vue({
+        el: "#root04",
+        data: {
+            firstName: '',
+            lastName: '',
+            count: 0
+        },
+        computed: {
+            fullName: function () {
+                return this.firstName + ' ' + this.lastName;
+            }
+        },
+        watch: {
+            // firstName: function () {
+            //     this.count++
+            // },
+            // lastName: function () {
+            //     this.count++
+            // },
+            fullName:function () {
+                this.count ++
+            }
+        }
+    })
+</script>
+
+
+
+<!-- v-if , v-show , v-for -->
+<div id="root05">
+    <!-- v-if 直接在DOM不存在此节点 -->
+    <div v-if="show">Hello World!</div>
+    <!-- v-show 是修改display的值为none -->
+    <div v-show="show">Hello World!</div>
+    <button @click="handleClick1">toggle</button>
+
+    <ul>
+        <!-- 循环遍历，item为单个元素值，index为元素位置。
+            要求key中的index值唯一，建议不用index
+         -->
+        <li v-for="(item,index) of list" :key="index">{{item}}</li>
+    </ul>
+</div>
+<script>
+    new Vue({
+        el: "#root05",
+        data: {
+            show : true,
+            list : [1,2,3]
+        },
+        methods :{
+            handleClick1 : function () {
+                this.show = !this.show;
+            }
+        }
+    })
+</script>
+</body>
+</html>
