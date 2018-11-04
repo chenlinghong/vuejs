@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01、Vue的基本代码</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{ msg }}</p>
+</div>
+
+</body>
+
+<script>
+    // 导入包后，在浏览器内存中，会存在Vue的构造函数
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'hello world.'
+        }
+    });
+</script>
+</html>

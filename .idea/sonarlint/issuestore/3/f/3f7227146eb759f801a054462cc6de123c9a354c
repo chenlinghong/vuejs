@@ -1,0 +1,20 @@
+
+hjavascript:S2589Ç"LRefactor this code so that this expression does not always evaluate to true.(š·®7
+hjavascript:S2589Ú-"LRefactor this code so that this expression does not always evaluate to true.(ÈªJ
+javascript:S2692ô"bThis check ignores index 0; consider using 'includes' method to make this check safe and explicit.(åÿË÷
+„javascript:S2692õ"bThis check ignores index 0; consider using 'includes' method to make this check safe and explicit.(¢«øéûÿÿÿÿ
+„javascript:S2692ö"bThis check ignores index 0; consider using 'includes' method to make this check safe and explicit.(ÀÍÿğıÿÿÿÿ
+javascript:S2692İT"bThis check ignores index 0; consider using 'includes' method to make this check safe and explicit.(ğ‚²†
+hjavascript:S2814‹"FRename "has" as this name is already used in declaration at line 1930.(óüÑüıÿÿÿÿ
+Tjavascript:S3972üQ"7Move this "if" to a new line or add the missing "else".(ñ›íÊ
+javascript:S1871è5"dEither merge this branch with the identical one on line "6876" or change one of the implementations.(ÎŞ–œ
+ljavascript:S3523ŒS"OReview this "Function" call and make sure its arguments are properly validated.(íÉ•¯
+kjavascript:S3523•S"OReview this "Function" call and make sure its arguments are properly validated.(òÏ‡@
+ljavascript:S3523«S"OReview this "Function" call and make sure its arguments are properly validated.(ŒÂÚ±
+ejavascript:UnusedVariableö":Remove the declaration of the unused 'isAndroid' variable.(ÀÍÿğıÿÿÿÿ
+Xjavascript:S1854ı"6Remove this useless assignment to local variable "def"(áì­Üşÿÿÿÿ
+Qjavascript:S1854†,"4Remove this useless assignment to local variable "i"(¸ÛÕÓ
+Vjavascript:S1854å,"4Remove this useless assignment to local variable "i"(¸°½¼úÿÿÿÿ
+Vjavascript:S1854Ü."4Remove this useless assignment to local variable "i"(Ñï–îûÿÿÿÿ
+Ijavascript:ParenthesesŠ"!Remove those useless parentheses.(…±Åÿÿÿÿÿ
+Djavascript:Parentheses­"!Remove those useless parentheses.(ùşàƒ
